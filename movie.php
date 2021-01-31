@@ -37,7 +37,8 @@
 
             $avgRatingQuery =
                 "SELECT AVG(rating) as avgrating
-                    FROM Review";
+                    FROM Review
+                    WHERE mid = $_GET[id]";
 
             $rs = $db->query($query);
             if (!$rs) {
@@ -54,13 +55,11 @@
             }
 
             $avgRating;
-            if (mysqli_num_rows($rsRating) == 0) {
-                $avgRating = "Unrated";
-            } else {
-                while ($row = $rsRating->fetch_assoc()) {
-                    $avgRating = number_format($row['avgrating'], 1);
-                }
+            while ($row = $rsRating->fetch_assoc()) {
+                $avgRating = number_format($row['avgrating'], 1);
             }
+            if ($avgRating == 0)
+                $avgRating = "Unrated";
 
             if (mysqli_num_rows($rs) == 0) {
                 print "<h1>Error: Movie not found.</h1>";

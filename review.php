@@ -23,7 +23,7 @@
                 <input type="text" class="form-control" placeholder="Your name" name="name" required>
                 <br>
                 <label>Rating:</label>
-                <input type="range" class="form-range" min="0" max="5" step="0.1" id="customRange2" name="rating">
+                <input type="range" class="form-range" min="1" max="5" step="0.01" id="customRange2" name="rating">
                 <br>
                 <br>
                 <label>Review:</label>
