@@ -1,0 +1,55 @@
+body {
+    margin-bottom: 5%;
+}
+
+h1 {
+    margin: 25;
+}
+
+.button {
+    text-decoration: none;
+    color: #408558;
+    padding: 4px 10px;
+    border: 1px solid #408558;
+    border-radius: 10px;
+}
+
+.button:hover {
+    color: white;
+    background-color: #408558;
+}
+
+.col {
+    width: 75%;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.landing {
+    height: 100%;
+    justify-content: center;
+}
+
+.list-group-item:hover {
+    background-color: #D6F3FB;
+}
+
+.rating {
+    color: #C54382;
+}
+
+.search {
+    width: 33%;
+}
+
+.one-col {
+    width: 50%;
+}
+
+.two-col {
+    flex: 50%;
+}
